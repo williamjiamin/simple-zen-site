@@ -1,0 +1,39 @@
+/* All selectors remain inside the new component: disabled mode is layout-identical. */
+.zen-pacer {
+  --zen-panel: #172b25;
+  --zen-ink: #eef2f0;
+  --zen-muted: #c0d2cb;
+  --zen-accent: #a1ddc7;
+  --zen-outline: #beeedd;
+  margin: 0 auto 48px;
+  padding: 28px 24px 24px;
+  max-width: 520px;
+  border: 1px solid #739988;
+  border-radius: 24px;
+  background: var(--zen-panel);
+  color: var(--zen-ink);
+  text-align: center;
+}
+.zen-pacer h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.3; }
+.zen-pacer .zen-help, .zen-pacer .zen-note { color: var(--zen-muted); font-size: 14px; }
+.zen-pacer .zen-help { margin: 0 auto 12px; max-width: 350px; }
+.zen-pacer .zen-ring { display: grid; place-items: center; margin: 14px auto 6px; width: 150px; height: 150px; }
+.zen-pacer .zen-ring-inner { width: 128px; height: 128px; border-radius: 50%; border: 3px solid var(--zen-accent); box-shadow: 0 0 32px #9ddcc350; background: #87ccb314; }
+.zen-pacer .zen-phase { font-size: 19px; font-weight: 600; margin: 0; min-height: 28px; }
+.zen-pacer .zen-countdown { margin: 4px 0 16px; font-variant-numeric: tabular-nums; font-size: 29px; font-weight: 600; }
+.zen-pacer .zen-countdown-desc { font-size: 12px; font-weight: 400; }
+.zen-pacer .zen-controls { display: grid; gap: 9px; justify-items: center; }
+.zen-pacer .zen-controls > label:first-child { font-size: 14px; font-weight: 600; }
+.zen-pacer select, .zen-pacer button { font: inherit; font-size: 15px; min-height: 44px; border-radius: 8px; }
+.zen-pacer select { width: min(100%, 295px); background: #0e1a17; color: #eef2f0; border: 1px solid #a1ddc7; padding: 7px 12px; }
+.zen-pacer button { border: 1px solid #a1ddc7; padding: 8px 20px; cursor: pointer; color: #0e1a17; background: #a1ddc7; }
+.zen-pacer button + button { background: #172b25; color: #eef2f0; }
+.zen-pacer .zen-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.zen-pacer .zen-chime-toggle { display: flex; gap: 9px; align-items: center; min-height: 44px; font-size: 14px; }
+.zen-pacer input[type="checkbox"] { width: 20px; height: 20px; accent-color: #a1ddc7; }
+.zen-pacer button:focus-visible, .zen-pacer select:focus-visible, .zen-pacer input:focus-visible { outline: 3px solid var(--zen-outline); outline-offset: 3px; }
+.zen-pacer .zen-note { margin: 14px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .zen-pacer .zen-ring-inner { transform: none !important; box-shadow: none; }
+}
+@media (max-width: 380px) { .zen-pacer { padding: 24px 14px; } }
